@@ -34,4 +34,8 @@ model Post {
   author    User     @relation(fields: [authorId], references: [id])
 }
 
+
+model Product {
+  id String @id @default(uuid())
+}
 // name type field_modifer (? -> optional) attributes (@)
