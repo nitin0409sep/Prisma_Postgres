@@ -1,0 +1,12 @@
+version: "3.2"
+services:
+  db:
+    container_name: prisma
+    image: postgres:15.7-alpine3.18
+    restart: on-failure
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: ${PASSWORD}
+      POSTGRES_USER: ${USER}
+      POSTGRES_DB: ${DATABASE}
